@@ -1,0 +1,55 @@
+
+:root {
+    --color-primary: rgb(59, 154, 28);
+    --color-primary-light: rgba(160, 191, 74, 0.612);
+    --color-primary-dark: rgb(160, 191, 74);
+
+    --color-grey-light-1: #f4f2f2;
+    --color-grey-dark-2: rgba(119, 119, 119, 0.789);
+    --color-grey-dark-3: rgba(119, 119, 119, 0.19);
+    --color-grey-dark-4: rgba(119, 119, 119, 0.401);
+    --color-grey-dark-5: rgba(119, 119, 119, 0.152);
+
+    --shadow-dark: 0 2rem 5rem var(--color-grey-dark-5);
+    --line: 1px solid var(--color-grey-dark-5);
+}
+
+$bp-largest: 75em;
+$bp-large: 62.5em;
+$bp-medium: 56.25em;
+$bp-small: 37.5em;
+$bp-smallest: 31.25em;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; //1rem = 10px
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 56.25%;
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    color: var(--color-grey-dark-2);
+}
